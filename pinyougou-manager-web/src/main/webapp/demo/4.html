@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var pyg=angular.module('pyg',[]);
+        pyg.controller('mypyg',function ($scope) {
+            $scope.add=function () {
+                return parseInt($scope.x)+parseInt($scope.y);
+            };
+        });
+    </script>
+
+</head>
+<body ng-app="pyg" ng-controller="mypyg">
+x:<input ng-model="x">
+y:<input ng-model="y">
+运算结果：{{add()}}
+</body>
+</html>
